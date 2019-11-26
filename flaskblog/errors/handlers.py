@@ -5,7 +5,7 @@ from flask import Blueprint, render_template
 errors = Blueprint('errors', __name__)
 
 @errors.app_errorhandler(404)
-def Not_Found_404(error):
+def Not_Found_404():
     """
     error when the requested URL was not found on the server
     :return:

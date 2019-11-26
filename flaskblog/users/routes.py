@@ -18,7 +18,7 @@ def register():
         db.create_all()
         db.session.add(user)
         db.session.commit()
-        flash(f'{form.username.data}, your account was created! You can log in now.', 'success')#bootstrap class
+        flash(f'{form.username.data}, your account was created! You can log in now.', 'success')
         return redirect(url_for('users.login'))
     return render_template('register.html', title='Register', form=form)
 
